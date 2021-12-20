@@ -35,7 +35,9 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datasGallery = request()->all(); 
+        
+        return response()->json($datasGallery);
     }
 
     /**
