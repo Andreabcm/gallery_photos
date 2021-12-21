@@ -35,8 +35,10 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $datasGallery = request()->all(); 
+        $datasGallery = request()->except('_token');
         
+        Gallery::insert($datasGallery);
+
         return response()->json($datasGallery);
     }
 

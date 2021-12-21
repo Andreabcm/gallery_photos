@@ -3,15 +3,14 @@ Form para añadir imágenes
 <form action="{{ url('/gallery') }}" method="post" enctype="multipart/form-data">
 @csrf
 
-    <label for="Photo"> Photo </label>
-    <input type="file" name="Photo" id="Photo">
+    <label for="image"> Image </label>
+    <input type="file" name="Image" id="Image">
     <br>
 
-    <label for="Title"> Title </label>
+    <label for="title"> Title </label>
     <input type="text" name="Title" id="Title">
     <br>
 
-    <label for="Enviar"> Enviar </label>
-    <input type="submit" name="Enviar" id="Enviar">
+    <input type="submit" value="Save">
 
 </form>
