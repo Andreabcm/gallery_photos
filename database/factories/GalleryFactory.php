@@ -22,8 +22,8 @@ class GalleryFactory extends Factory
     public function definition()
     {
         return [
-            'image' => $this->faker->image(),
-            'title' => $this->faker->company(),
+            'Image' => $this->faker->image(),
+            'Title' => $this->faker->company(),
         ];
     }
 }

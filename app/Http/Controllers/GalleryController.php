@@ -36,6 +36,10 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $datasGallery = request()->except('_token');
+
+        if($request->hasFile('Image')){
+            $datasGallery['Image']=$request->file('Image')->store('uploads', 'public');
+        }
         
         Gallery::insert($datasGallery);
 
