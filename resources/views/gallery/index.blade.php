@@ -1,4 +1,8 @@
 
+@if(Session::has('message'))
+{{ Session::get('message') }}
+@endif
+
 <a href="{{ url('/gallery/create') }}"> Create favorite photo </a>
 
 <table class="table table-light">

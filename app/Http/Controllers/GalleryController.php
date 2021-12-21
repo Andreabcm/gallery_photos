@@ -46,7 +46,8 @@ class GalleryController extends Controller
         
         Gallery::insert($datasGallery);
 
-        return response()->json($datasGallery);
+       /*  return response()->json($datasGallery); */
+        return redirect('gallery')->with('message','Added image');
     }
 
     /**
@@ -110,6 +111,6 @@ class GalleryController extends Controller
             Gallery::destroy($id);
         }
 
-        return redirect('gallery');
+        return redirect('gallery')->with('message','Deleted image');
     }
 }
