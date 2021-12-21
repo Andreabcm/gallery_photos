@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::resource('gallery',GalleryController::class);
+Route::resource('gallery',GalleryController::class)->middleware('auth');
 
 Auth::routes();
 
