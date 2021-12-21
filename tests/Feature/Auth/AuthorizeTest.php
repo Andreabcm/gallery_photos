@@ -34,4 +34,17 @@ class AuthorizeTest extends TestCase
         $this->assertAuthenticated();
         $response->assertRedirect('/home');
     }
+
+    public function test_invalid_email_confirmation()
+    {
+        $user = User::factory()->create();
+
+        $this->post('/login',
+        [
+            'email' => 'wrong-$user->email',
+            'password' => 'password',
+        ]);
+
+        $this->assertGuest();
+    }
 }
