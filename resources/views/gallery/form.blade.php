@@ -9,4 +9,6 @@
     <input type="text" name="Title" value="{{ isset($gallery->title) ?$gallery->title:'' }}" id="Title">
     <br>
     <input type="submit" value="Save">
+
+    <a href="{{ url('/gallery/') }}"> Return </a>
     <br>
