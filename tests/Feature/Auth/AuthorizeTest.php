@@ -47,4 +47,18 @@ class AuthorizeTest extends TestCase
 
         $this->assertGuest();
     }
+
+    public function test_invalid_password_confirmation()
+    {
+        $user = User::factory()->create();
+
+        $this->post('/login',
+        [
+            'email' => $user->email,
+            'password' => 'wrong-password',
+        ]);
+
+        $this->assertGuest();
+    }
+    
 }
