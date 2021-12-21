@@ -16,7 +16,7 @@ class RegisterTest extends TestCase
      */
     public function test_register_path_confirmation()
     {
-        $response = $this->get('/login');
+        $response = $this->get('/register');
 
         $response->assertStatus(200);
     }
