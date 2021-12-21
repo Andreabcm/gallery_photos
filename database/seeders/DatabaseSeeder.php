@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
         
         Gallery::factory()->create([
         
-            'Image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB9aErbX4vxT8UVQPF94YoVrFDKb2zeRZXqQ&usqp=CAU',            
-            'Title' => 'Muebles',
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB9aErbX4vxT8UVQPF94YoVrFDKb2zeRZXqQ&usqp=CAU',            
+            'title' => 'Muebles',
     
         ]);
 
