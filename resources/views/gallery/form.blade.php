@@ -1,10 +1,10 @@
-Form 
 
     <label for="Image"> Image </label>
-    <input type="file" name="Image" id="Image">
+    {{ $gallery->image }}
+    <input type="file" name="Image" value=" " id="Image">
     <br>
     <label for="Title"> Title </label>
-    <input type="text" name="Title" id="Title">
+    <input type="text" name="Title" value="{{ $gallery->title }}" id="Title">
     <br>
     <input type="submit" value="Save">
     <br>

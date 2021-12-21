@@ -65,9 +65,11 @@ class GalleryController extends Controller
      * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function edit(Gallery $gallery)
+    public function edit($id)
     {
-        return view('gallery.edit');
+        $gallery=Gallery::findOrFail($id);
+
+        return view('gallery.edit', compact('gallery'));
     }
 
     /**
