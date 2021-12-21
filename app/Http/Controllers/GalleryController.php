@@ -79,9 +79,15 @@ class GalleryController extends Controller
      * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Gallery $gallery)
+    public function update(Request $request, $id)
     {
-        //
+        $datasGallery = request()->except('_token','_method');
+
+        Gallery::where('id','=',$id)->update($datasGallery);
+
+        $gallery=Gallery::findOrFail($id);
+
+        return view('gallery.edit', compact('gallery'));
     }
 
     /**

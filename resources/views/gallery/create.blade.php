@@ -4,5 +4,4 @@ Form para añadir imágenes
 @csrf
 @include('gallery.form');
 
-
 </form>
