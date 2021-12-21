@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use App\Models\Gallery;
 use Illuminate\Database\Seeder;
 
@@ -16,6 +17,11 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         
+        User::factory()->create([
+            'name' => 'usuario',
+            'email' => 'usuario@gmail.com'
+        ]);
+
         Gallery::factory()->create([
         
             'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB9aErbX4vxT8UVQPF94YoVrFDKb2zeRZXqQ&usqp=CAU',            
