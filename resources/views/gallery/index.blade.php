@@ -16,7 +16,10 @@ Mostrar imágenes
             <td>{{ $gallery->id }}</td>
             <td>{{ $gallery->image }}</td>
             <td>{{ $gallery->title }}</td>
-            <td>Edit |
+            <td>
+            
+            <a href="{{ url('/gallery/'.$gallery->id.'/edit') }}">    
+                Edit 
 
             <form action="{{ url('/gallery/'.$gallery->id) }}" method="post">
             @csrf    

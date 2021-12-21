@@ -67,7 +67,7 @@ class GalleryController extends Controller
      */
     public function edit(Gallery $gallery)
     {
-        //
+        return view('gallery.edit');
     }
 
     /**
