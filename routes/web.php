@@ -19,8 +19,8 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-
 Route::resource('gallery',GalleryController::class);
+
 Auth::routes();
 
 Route::get('/home', [GalleryController::class, 'index'])->name('home');
