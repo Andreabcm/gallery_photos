@@ -88,8 +88,10 @@ class GalleryController extends Controller
      * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gallery $gallery)
+    public function destroy($id)
     {
-        //
+        Gallery::destroy($id);
+
+        return redirect('gallery');
     }
 }
