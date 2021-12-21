@@ -16,7 +16,7 @@
         <tr>
             <td>{{ $gallery->id }}</td>
             <td>
-                <img src="{{ asset('storage').'/'.$gallery->Image }}" alt="" width="100">
+                <img src="{{ asset('storage').'/'.$gallery->image }}" alt="" width="100">
             </td>
             <td>{{ $gallery->title }}</td>
             

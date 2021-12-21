@@ -1,7 +1,7 @@
 
     <label for="Image"> Image </label>
     @if(isset($gallery->Image))
-    <img src="{{ asset('storage').'/'.$gallery->Image }}" alt="" width="100">
+    <img src="{{ asset('storage').'/'.$gallery->image }}" alt="" width="100">
     @endif
     <input type="file" name="Image" value=" " id="Image">
     <br>

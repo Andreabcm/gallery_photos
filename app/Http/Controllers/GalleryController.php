@@ -86,7 +86,7 @@ class GalleryController extends Controller
 
         if($request->hasFile('Image')){
             $gallery=Gallery::findOrFail($id);
-            Storage::delete('public/'.$gallery->Foto);
+            Storage::delete('public/'.$gallery->image);
             $datasGallery['Image']=$request->file('Image')->store('uploads', 'public');
         }
 
@@ -104,7 +104,11 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        Gallery::destroy($id);
+        $gallery=Gallery::findOrFail($id);
+
+        if(Storage::delete('public/'.$gallery->image)){
+            Gallery::destroy($id);
+        }
 
         return redirect('gallery');
     }
