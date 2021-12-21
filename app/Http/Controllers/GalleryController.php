@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
@@ -83,8 +84,13 @@ class GalleryController extends Controller
     {
         $datasGallery = request()->except('_token','_method');
 
-        Gallery::where('id','=',$id)->update($datasGallery);
+        if($request->hasFile('Image')){
+            $gallery=Gallery::findOrFail($id);
+            Storage::delete('public/'.$gallery->Foto);
+            $datasGallery['Image']=$request->file('Image')->store('uploads', 'public');
+        }
 
+        Gallery::where('id','=',$id)->update($datasGallery);
         $gallery=Gallery::findOrFail($id);
 
         return view('gallery.edit', compact('gallery'));

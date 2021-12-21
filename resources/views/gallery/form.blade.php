@@ -1,6 +1,5 @@
 
     <label for="Image"> Image </label>
-    {{ $gallery->image }}
     <img src="{{ asset('storage').'/'.$gallery->Image }}" alt="" width="100">
     <input type="file" name="Image" value=" " id="Image">
     <br>
