@@ -14,10 +14,12 @@ Mostrar imágenes
         @foreach($galleries as $gallery)
         <tr>
             <td>{{ $gallery->id }}</td>
-            <td>{{ $gallery->image }}</td>
-            <td>{{ $gallery->title }}</td>
             <td>
+                <img src="{{ asset('storage').'/'.$gallery->Image }}" alt="" width="100">
+            </td>
+            <td>{{ $gallery->title }}</td>
             
+            <td>
             <a href="{{ url('/gallery/'.$gallery->id.'/edit') }}">    
                 Edit 
 
@@ -26,7 +28,6 @@ Mostrar imágenes
             {{ method_field('DELETE') }}
             <input type="submit" onclick="return confirm('Do you want to delete?')"
             value="Delete">
-
             </form> 
 
             </td> 
