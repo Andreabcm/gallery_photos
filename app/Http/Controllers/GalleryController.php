@@ -39,13 +39,13 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $fields=[
-            'image'=>'required',
-            'tile'=>'required',
+            'Image'=>'required',
+            'Title'=>'required',
         ];
 
         $message=[
-                'required'=>'The :attribute is required',
-                'image.required'=>'The required image',
+            'Image.required'=>'The required image',    
+            'required'=>'The :attribute is required',
         ];
 
         $this->validate($request, $fields, $message);

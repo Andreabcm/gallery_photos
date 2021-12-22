@@ -1,17 +1,13 @@
 <h2> {{ $mode }} image </h2>
 
 @if(count($errors)>0)
-
 <div class="alert alert-danger" role="alert">
-    
     <ul>
         @foreach($errors->all() as $error)
         <li>{{ $error }}</li>
         @endforeach
     </ul>  
-
 </div>
-
 @endif
 
 <div class="form-group">
@@ -25,7 +21,7 @@
 
 <div class="form-group">
 <label for="Title"> Title </Title> </label>
-<input class="form-control" type="text" name="Title" value="{{ isset($gallery->title) ?$gallery->title:'' }}" id="Title">
+<input class="form-control" type="text" name="Title" value="{{ isset($gallery->title) ?$gallery->title:old('Title')}}" id="Title">
 <br>
 </div>
 
