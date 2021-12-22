@@ -10,7 +10,7 @@
     <div class="row justify-content-center">
         @foreach($data as $gallery)
     <div class="card m-4 " style="width: 18rem">
-        <img class="card-img-top pt-3" style="height: 100%; width: 100%" src="{{ asset('storage').'/'.$gallery->image }}" alt="image favorite">
+        <img class="card-img-top pt-3" style="height: 100%; width: 100%"src="{{ asset('storage').'/'.$gallery->image }}" alt="image favorite">
     <div class="card-body fw-bold">
         <h3>{{ $gallery->title }}</h3>
         <a class="btn btn-outline-info btn-lg" href="{{ url('/gallery/'.$gallery->id.'/edit') }}"><i class="bi bi-pencil-square"></i></a> 
