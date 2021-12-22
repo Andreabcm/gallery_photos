@@ -17,7 +17,7 @@ class GalleryController extends Controller
     {
         $data['galleries']=Gallery::paginate(15);
 
-        return view('gallery.index', $data);
+        return view('gallery.index', $data, compact('data'));
     }
 
     /**
