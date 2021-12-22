@@ -95,6 +95,21 @@ class GalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $fields=[
+            'Title'=>'required',
+        ];
+
+        $message=[   
+            'required'=>'The :attribute is required',
+        ];
+
+        if($request->hasFile('Image')){
+            $fields=['Image'=>'required'];
+            $message=['Image.required'=>'The required image'];        
+        }
+
+        $this->validate($request, $fields, $message);
+
         $datasGallery = request()->except('_token','_method');
 
         if($request->hasFile('Image')){
