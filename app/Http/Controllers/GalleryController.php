@@ -121,7 +121,7 @@ class GalleryController extends Controller
         Gallery::where('id','=',$id)->update($datasGallery);
         $gallery=Gallery::findOrFail($id);
 
-        return view('gallery.edit', compact('gallery'));
+        return redirect('gallery');
     }
 
     /**
