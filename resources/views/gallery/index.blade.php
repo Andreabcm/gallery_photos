@@ -6,7 +6,7 @@
 {{ Session::get('message') }}
 @endif
 
-<a class="btn btn-info" href="{{ url('/gallery/create') }}"> Create favorite photo </a>
+<a class="btn btn-info" href="{{ url('/gallery/create') }}"> Create </a>
 <br/>
 <br/>
 <table class="table table-light">
