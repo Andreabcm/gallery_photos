@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Moldes\User;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -15,7 +16,10 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $data['galleries']=Gallery::paginate(15);
+        $user = auth()->user();
+
+        $data=Gallery::all(); 
+        $data = $data->where('user_id', $user->id);
 
         return view('gallery.index', $data, compact('data'));
     }
@@ -41,6 +45,7 @@ class GalleryController extends Controller
         $fields=[
             'Image'=>'required',
             'Title'=>'required',
+            'user_id'=>'',
         ];
 
         $message=[
@@ -54,6 +59,7 @@ class GalleryController extends Controller
 
         if($request->hasFile('Image')){
             $datasGallery['Image']=$request->file('Image')->store('uploads', 'public');
+            $datasGallery['user_id']=auth()->user()->id;
         }
         
         Gallery::insert($datasGallery);

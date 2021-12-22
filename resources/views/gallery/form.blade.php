@@ -10,6 +10,7 @@
 </div>
 @endif
 
+
 <div class="form-group">
 <label for="Image"> Image </label>
     @if(isset($gallery->Image))
