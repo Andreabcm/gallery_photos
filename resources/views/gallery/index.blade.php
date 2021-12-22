@@ -6,15 +6,16 @@
 {{ Session::get('message') }}
 @endif
 
-<a href="{{ url('/gallery/create') }}"> Create favorite photo </a>
-
+<a class="btn btn-info" href="{{ url('/gallery/create') }}"> CREATE FAVORITE PHOTO </a>
+<br/>
+<br/>
 <table class="table table-light">
     
     <thead class="thead-light">
         <tr>
             <th>#</th>
-            <th>Image</th>
-            <th>Title</th>
+            <th>IMAGE</th>
+            <th>TITLE</th>
         </tr>
     </thead>
 
@@ -23,18 +24,18 @@
         <tr>
             <td>{{ $gallery->id }}</td>
             <td>
-                <img src="{{ asset('storage').'/'.$gallery->image }}" alt="" width="100">
+                <img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$gallery->image }}" alt="" width="100">
             </td>
             <td>{{ $gallery->title }}</td>
             
             <td>
-            <a href="{{ url('/gallery/'.$gallery->id.'/edit') }}">    
-                Edit 
+            <a class="btn btn-dark" href="{{ url('/gallery/'.$gallery->id.'/edit') }}"> Edit </a>    
+        
 
-            <form action="{{ url('/gallery/'.$gallery->id) }}" method="post">
+            <form class="d-inline" action="{{ url('/gallery/'.$gallery->id) }}" method="post">
             @csrf    
             {{ method_field('DELETE') }}
-            <input type="submit" onclick="return confirm('Do you want to delete?')"
+            <input class="btn btn-dark" type="submit" onclick="return confirm('Do you want to delete?')"
             value="Delete">
             </form> 
 

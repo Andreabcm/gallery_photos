@@ -7,7 +7,7 @@
     @endif
 <input type="file" name="Image" value=" " id="Image">
 <br>
-<label for="Title"> Title </label>
+<label for="Title"> Titledgsgs </label>
 <input type="text" name="Title" value="{{ isset($gallery->title) ?$gallery->title:'' }}" id="Title">
 <br>
 <input type="submit" value="{{$mode}}">
