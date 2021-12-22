@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
 </head>
 <body>
     <div id="app">
@@ -33,9 +35,12 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('gallery.index') }}">{{ __('My favorite images') }}</a>
+                            <a class="nav-link border border-info" style="border-radius:.3rem" href="{{ route('gallery.index') }}">{{ __('My favorite images') }}</a>
+                        </li>
+                        <li class="nav-item px-2 bd-highlight d-inline-block">
+                            <a class="nav-link border border-info" style="border-radius:.3rem" href="{{ url('/gallery/create') }}">{{ __('Create image') }}</a>
                         </li>     
                     </ul>
 

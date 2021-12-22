@@ -4,7 +4,7 @@
 
 <form action="{{ url('/gallery') }}" method="post" enctype="multipart/form-data">
 @csrf
-@include('gallery.form',['mode'=>'Save']);
+@include('gallery.form',['mode'=>'Create']);
 </form>
 
 </div>

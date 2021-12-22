@@ -6,41 +6,25 @@
 {{ Session::get('message') }}
 @endif
 
-<a class="btn btn-info" href="{{ url('/gallery/create') }}"> Create </a>
-<br/>
-<br/>
-<table class="table table-light">
-    
-    <thead class="thead-light">
-        <tr>
-            <th>#</th>
-            <th>IMAGE</th>
-            <th>TILE</th>
-        </tr>
-    </thead>
-
-    <tbody>
+<div class="container">
+    <div class="row justify-content-center">
         @foreach($data as $gallery)
-        <tr>
-            <td>{{ $gallery->id }}</td>
-            <td><img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$gallery->image }}" alt="" width="100"></td>
-            <td>{{ $gallery->title }}</td>
-            
-            <td>
-            <a class="btn btn-dark" href="{{ url('/gallery/'.$gallery->id.'/edit') }}"> Edit </a>    
-        
-            <form class="d-inline" action="{{ url('/gallery/'.$gallery->id) }}" method="post">
+    <div class="card m-4 " style="width: 18rem">
+        <img class="card-img-top pt-3" style="height: 100%; width: 100%" src="{{ asset('storage').'/'.$gallery->image }}" alt="image favorite">
+    <div class="card-body fw-bold">
+        <h3>{{ $gallery->title }}</h3>
+        <a class="btn btn-outline-info btn-lg" href="{{ url('/gallery/'.$gallery->id.'/edit') }}"><i class="bi bi-pencil-square"></i></a> 
+        <form class="d-inline" action="{{ url('/gallery/'.$gallery->id) }}" method="post">
             @csrf    
             {{ method_field('DELETE') }}
-            <input class="btn btn-dark" type="submit" onclick="return confirm('Do you want to delete?')"
-            value="Delete">
-            </form> 
-            </td> 
-        </tr>
+            <button class="btn btn-outline-info btn-lg" type="submit" onclick="return confirm('Do you want to delete?')"
+                value="Delete">
+                <i class="bi bi-trash-fill" style="width:1rem"></i>
+            </button>
+        </form> 
+    </div>
+    </div>
         @endforeach
-    </tbody>
-
-</table>
-
+    </div>
 </div>
 @endsection
