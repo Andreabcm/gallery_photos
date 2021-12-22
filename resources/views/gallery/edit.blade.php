@@ -5,7 +5,7 @@
 <form action="{{ url('/gallery/' .$gallery->id) }}" method="post" enctype="multipart/form-data">
 @csrf
 {{ method_field('PATCH') }}
-@include('gallery.form',['mode'=>'Edit']);
+@include('gallery.form',['mode'=>'Save']);
 </form>
 
 </div>
