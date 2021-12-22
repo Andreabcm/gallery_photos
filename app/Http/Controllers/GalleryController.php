@@ -15,7 +15,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $data['galleries']=Gallery::paginate(5);
+        $data['galleries']=Gallery::paginate(15);
 
         return view('gallery.index', $data);
     }
