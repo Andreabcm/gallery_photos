@@ -1,5 +1,19 @@
 <h2> {{ $mode }} image </h2>
 
+@if(count($errors)>0)
+
+<div class="alert alert-danger" role="alert">
+    
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>  
+
+</div>
+
+@endif
+
 <div class="form-group">
 <label for="Image"> Image </label>
     @if(isset($gallery->Image))
@@ -10,7 +24,7 @@
 </div>
 
 <div class="form-group">
-<label for="Title"> Name </label>
+<label for="Title"> Title </Title> </label>
 <input class="form-control" type="text" name="Title" value="{{ isset($gallery->title) ?$gallery->title:'' }}" id="Title">
 <br>
 </div>

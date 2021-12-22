@@ -38,6 +38,18 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
+        $fields=[
+            'image'=>'required',
+            'tile'=>'required',
+        ];
+
+        $message=[
+                'required'=>'The :attribute is required',
+                'image.required'=>'The required image',
+        ];
+
+        $this->validate($request, $fields, $message);
+
         $datasGallery = request()->except('_token');
 
         if($request->hasFile('Image')){

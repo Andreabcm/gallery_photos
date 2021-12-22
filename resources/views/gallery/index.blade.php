@@ -15,7 +15,7 @@
         <tr>
             <th>#</th>
             <th>IMAGE</th>
-            <th>NAME</th>
+            <th>TILE</th>
         </tr>
     </thead>
 
