@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
 
 @if(Session::has('message'))
     <div class="alert alert-primary alert-dismissible" style="width: 250px" role="alert">  
@@ -11,9 +10,7 @@
     </div>
 @endif
 
-
 <div class="container">
-
     <div class="row justify-content-center">
         @foreach($data as $gallery)
     <div class="card m-4" style="width: 18rem">
@@ -34,4 +31,5 @@
         @endforeach
     </div>
 </div>
+
 @endsection
