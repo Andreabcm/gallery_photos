@@ -40,10 +40,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link border border-info" style="border-radius:.3rem" href="{{ route('gallery.index') }}">{{ __('My favorite images') }}</a>
+                            <a class="nav-link border border-dark" style="border-radius:.3rem" href="{{ route('gallery.index') }}">{{ __('My favorite images') }}</a>
                         </li>
                         <li class="nav-item px-2 bd-highlight d-inline-block">
-                            <a class="nav-link border border-info" style="border-radius:.3rem" href="{{ url('/gallery/create') }}">{{ __('Create image') }}</a>
+                            <a class="nav-link border border-dark" style="border-radius:.3rem" href="{{ url('/gallery/create') }}">{{ __('Create image') }}</a>
                         </li>     
                     </ul>
 
