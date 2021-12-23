@@ -1,5 +1,4 @@
 # MY GALLERY
-# MY GALLERY
 
 Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favoritas, en la cual, podrás guardar todas esas fotos que desees almacenar para posteriormente visualizarlas.
 
