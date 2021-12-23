@@ -24,9 +24,11 @@ Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favori
 
 * [Visual Studio Code](https://code.visualstudio.com/) - Editor de código
 * [Xamp](https://www.apachefriends.org/es/index.html) - Entorno de desarrollo de PHP
-* [PHP](https://www.php.net/) - Lenguaje utilizado
+* [PHP - 8](https://www.php.net/) - Lenguaje utilizado
+* [PHPUnit](https://phpunit.de/) - Entorno para los tests
 * [laravel](https://laravel.com/) - El framework web usado
 * [Bootstrap](https://getbootstrap.com/) - Es un framework CSS
+* [Bootstrap Icons](https://icons.getbootstrap.com/) - Librería propia de Bootstrap
 * [MySQL](https://www.mysql.com/) - Manejador de base de datos
 * [GitHub](https://github.com/) - Sistema de control de versionas
 * [Pixabay](https://pixabay.com/es/) - Banco de imagenes
