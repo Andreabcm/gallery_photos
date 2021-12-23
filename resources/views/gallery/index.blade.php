@@ -3,8 +3,14 @@
 <div class="container">
 
 @if(Session::has('message'))
-{{ Session::get('message') }}
+    <div class="alert alert-primary alert-dismissible" style="width: 250px" role="alert">  
+        {{ Session::get('message') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 @endif
+
 
 <div class="container">
     <div class="row justify-content-center">

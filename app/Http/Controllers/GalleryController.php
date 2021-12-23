@@ -65,7 +65,7 @@ class GalleryController extends Controller
         Gallery::insert($datasGallery);
 
        /*  return response()->json($datasGallery); */
-        return redirect('gallery');
+        return redirect('gallery')->with('message','Added image');
     }
 
     /**
@@ -127,7 +127,7 @@ class GalleryController extends Controller
         Gallery::where('id','=',$id)->update($datasGallery);
         $gallery=Gallery::findOrFail($id);
 
-        return redirect('gallery');
+        return redirect('gallery')->with('message','Modified image');
     }
 
     /**
@@ -144,6 +144,6 @@ class GalleryController extends Controller
             Gallery::destroy($id);
         }
 
-        return redirect('gallery');
+        return redirect('gallery')->with('message','Deleted image');
     }
 }
