@@ -64,7 +64,6 @@ class GalleryController extends Controller
         
         Gallery::insert($datasGallery);
 
-       /*  return response()->json($datasGallery); */
         return redirect('gallery')->with('message','Added image');
     }
 
