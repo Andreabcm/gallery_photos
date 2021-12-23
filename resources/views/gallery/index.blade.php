@@ -13,6 +13,7 @@
 
 
 <div class="container">
+   
     <div class="row justify-content-center">
         @foreach($data as $gallery)
     <div class="card m-4" style="width: 18rem">
