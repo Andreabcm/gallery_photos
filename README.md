@@ -16,7 +16,7 @@ Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favori
 
 ## Running Tests 📌
 
-- vendor/bin/phpunit
+- vendor/bin/phpunit o php artisan test
 
 ## Construido con 🛠️
 
