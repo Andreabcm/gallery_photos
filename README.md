@@ -39,3 +39,4 @@ Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favori
 
 - MVC
 - Tests
+- Clean Code
