@@ -10,6 +10,8 @@ Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favori
 - npm install && npm run dev
 - php artisan migrate:fresh --seed
 - php artisan storage:link
+- generar un .env con el comando: cp .env.example .env 
+- crear una base de datos en phpMyAdmin y conectarla con el .env
 
 
 ## Running app 📌
