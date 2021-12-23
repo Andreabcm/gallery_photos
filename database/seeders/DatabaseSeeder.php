@@ -28,41 +28,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        Gallery::factory()->create([
-            'image' => 'img/niña.jpg',            
+        Gallery::factory(5)->create([
+            'image' => 'uploads/niña.jpg',            
             'title' => 'flowers',
             'user_id' => '1',
         ]);
 
-        Gallery::factory()->create([
-            'image' => '',             
-            'title' => 'flowers',
-            'user_id' => '1',
-        ]);
-
-        Gallery::factory()->create([
-            'image' => '',   
-            'title' => 'flowers',
-            'user_id' => '1',
-        ]);
-
-        Gallery::factory()->create([
+        Gallery::factory(5)->create([
         
-            'image' => '',            
-            'title' => 'flowers',
-            'user_id' => '2',
-        ]);
-
-        Gallery::factory()->create([
-        
-            'image' => '',            
-            'title' => 'flowers',
-            'user_id' => '2',
-        ]);
-
-        Gallery::factory()->create([
-        
-            'image' => '',            
+            'image' => 'uploads/niña.jpg',           
             'title' => 'flowers',
             'user_id' => '2',
         ]);
