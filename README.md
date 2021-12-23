@@ -10,7 +10,7 @@ Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favori
 - npm install && npm run dev
 
 
-## Running app📌
+## Running app 📌
 - php artisan serve
 
 
