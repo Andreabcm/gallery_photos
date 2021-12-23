@@ -14,6 +14,7 @@ login.png
 - generar un .env con el comando: cp .env.example .env 
 - crear una base de datos en phpMyAdmin y conectarla con el .env
 
+![login__](https://user-images.githubusercontent.com/73828951/147268561-62142b68-3702-4d34-a6bd-d42ddd879295.PNG)
 
 ## Running app 📌
 - php artisan serve
