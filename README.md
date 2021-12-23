@@ -1,9 +1,9 @@
 # MY GALLERY
 
-Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favoritas, en la cual, podrás guardar todas esas fotos que desees almacenar para posteriormente visualizarlas.
+Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favoritas, en la cual, podrás guardar todas esas fotos que desees almacenar, para posteriormente visualizarlas.
 
 
-## Instalación 📌
+## Instalación 🚀
 
 - clonar el repositorio: https://github.com/Andreabcm/gallery_photos.git
 - composer update
@@ -20,14 +20,15 @@ Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favori
 
 - vendor/bin/phpunit o php artisan test
 
+
 ## Construido con 🛠️
 
 * [Visual Studio Code](https://code.visualstudio.com/) - Editor de código
 * [Xamp](https://www.apachefriends.org/es/index.html) - Entorno de desarrollo de PHP
 * [PHP - 8](https://www.php.net/) - Lenguaje utilizado
 * [PHPUnit](https://phpunit.de/) - Entorno para los tests
-* [laravel](https://laravel.com/) - El framework web usado
-* [Bootstrap](https://getbootstrap.com/) - Es un framework CSS
+* [laravel - 8](https://laravel.com/) - El framework web usado
+* [Bootstrap - 5](https://getbootstrap.com/) - Es un framework CSS
 * [Bootstrap Icons](https://icons.getbootstrap.com/) - Librería propia de Bootstrap
 * [MySQL](https://www.mysql.com/) - Manejador de base de datos
 * [GitHub](https://github.com/) - Sistema de control de versionas
