@@ -80,9 +80,9 @@
                                         <button type="submit" class="btn btn-outline-light mr-4">
                                             {{ __('Login') }}
                                         </button>
-                                        <br>
+                                        
                                         @if (Route::has('password.request'))
-                                            <a class="password-forgot color-label btn btn-link" href="{{ route('password.request') }}">
+                                            <a class="password-forgot color-label btn btn-link ms-5" href="{{ route('password.request') }}">
                                                 {{ __('Forgot Your Password?') }}
                                             </a>
                                         @endif
