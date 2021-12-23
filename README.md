@@ -6,8 +6,10 @@ Esta aplicación web ha sido creada con el fin de gestionar tus imágenes favori
 ## Instalación 📌
 
 - clonar el repositorio: https://github.com/Andreabcm/gallery_photos.git
-- composer install
+- composer update
 - npm install && npm run dev
+- php artisan migrate:fresh --seed
+- php artisan storage:link
 
 
 ## Running app 📌
