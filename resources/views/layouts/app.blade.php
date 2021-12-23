@@ -15,6 +15,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="{{asset('css/form.css') }}" rel="stylesheet">
+    <link href="{{asset('css/index.css') }}" rel="stylesheet">
     <link href="{{asset('css/login.css') }}" rel="stylesheet">
 
     <!-- Styles -->

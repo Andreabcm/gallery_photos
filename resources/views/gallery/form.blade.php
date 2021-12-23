@@ -13,7 +13,7 @@
 <div class="form-group">
     <label for="Image"> Image </label>
         @if(isset($gallery->Image))
-            <img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$gallery->image }}" alt="image favorite" width="100">
+            <img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$gallery->image }}" alt="image favorite">
         @endif
     <input class="form-control border border-info" style="width:450px" type="file" name="Image" value=" " id="Image">
     <br>
